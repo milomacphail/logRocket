@@ -1,0 +1,32 @@
+{
+  "name": "logrocketmern",
+  "version": "1.0.0",
+  "description": "LogRocket test app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milomacphail/logRocket.git"
+  },
+  "author": "Milo MacPhail",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milomacphail/logRocket/issues"
+  },
+  "homepage": "https://github.com/milomacphail/logRocket#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
