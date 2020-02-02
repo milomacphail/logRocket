@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Movie = require('../../models/movie');
+const Movie = require('../../models/Movie');
 
 //@route GET api/movies/test
 //@description tests movie route
@@ -37,12 +37,12 @@ router.post('/', (req, res) => {
     .catch(err => res.status(400).json({ error: 'Movie not added to database'}))
 });
 
-//@route UPDATE api/movies/:id
+//@route GET api/movies/:id
 //@description update movie information
 //@access Public
 
-router.put('/', (req, res) => {
-    Movie.findById(req.params.id, req.body)
+router.put('/:id', (req, res) => {
+    Movie.findByIdAndUpdate(req.params.id, req.body)
     .then(movie => res.json({msg: 'Movie updated successfully'}))
     .catch(err => res.status(400).json({error: 'Movie could not be updated'}));
 });
@@ -57,4 +57,3 @@ router.delete('/:id', (req, res) =>{
 });
 
 module.exports = router;
-

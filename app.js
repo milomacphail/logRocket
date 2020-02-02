@@ -1,16 +1,19 @@
-const mongoose = require('mongoose');
 const express = require('express');
-const connectDb = require('./config/db.js');
+const connectDB = require('./config/db');
+var cors = require('cors');
+
+const movies = require('./routes/api/movies');
 
 const app = express();
 
-connectDb();
+connectDB();
 
-app.get('/', (req, res) => {
-    res.send('Request sent to server');
-})
+app.use(cors({ origin: true, credentials: true }));
 
+app.use(express.json());
 
-const port = process.env.PORT || 3000;
+app.use('/api/movies', movies);
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+const port = process.env.PORT || 8082;
+
+app.listen(port, () => console.log(`Server running on port ${port}`));
