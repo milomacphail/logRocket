@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
 
-const movies = require('./routes/api/movies');
+const grads = require('./routes/api/grads');
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json());
 
-app.use('/api/movies', movies);
+app.use('/api/grads', grads);
 
 const port = process.env.PORT || 8082;
 

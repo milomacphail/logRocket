@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MovieSchema = new mongoose.Schema({
+const GradSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -25,4 +25,4 @@ const MovieSchema = new mongoose.Schema({
     }
 })
 
-module.exports = Movie = mongoose.model('movie', MovieSchema);
+module.exports = Movie = mongoose.model('grad', GradSchema);
