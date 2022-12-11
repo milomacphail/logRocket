@@ -24,7 +24,7 @@
     "config": "^3.2.5",
     "core-util-is": "^1.0.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.8.11",
     "validation": "0.0.1"
   },
